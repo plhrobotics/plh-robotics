@@ -74,27 +74,29 @@ body {
   text-align: center;
 }
 
-.proyecto-detalle {
-  max-width: 900px;       /* ancho máximo */
-  margin: 0 auto;         /* centra horizontalmente todo el contenedor */
-  padding: 40px 20px;     /* espacio interno */
+/* Contenedor general para centrar la página */
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;    /* centra todo el contenido dentro */
-  text-align: center;     /* centra textos */
+  justify-content: center;  /* centra horizontalmente */
+  width: 100%;
+  padding: 40px 20px;
 }
 
-.proyecto-detalle header,
-.proyecto-detalle section {
-  width: 100%;            /* se expande al ancho del contenedor */
+/* Contenido del proyecto */
+.proyecto-detalle {
+  max-width: 900px;        /* ancho máximo */
+  width: 100%;
+  text-align: center;      /* centra textos */
 }
 
+/* Imágenes dentro del proyecto */
 .proyecto-detalle img {
   max-width: 100%;
   height: auto;
   margin: 20px 0;
 }
 
+/* Listas de especificaciones */
 .proyecto-detalle ul {
   list-style: none;
   padding: 0;
@@ -103,6 +105,7 @@ body {
 .proyecto-detalle li {
   margin: 10px 0;
 }
+
 
 
 /* RESPONSIVE */
