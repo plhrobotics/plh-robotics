@@ -74,37 +74,60 @@ body {
   text-align: center;
 }
 
-/* Contenedor general para centrar la página */
-.container {
+/* Contenedor de página completa para proyectos individuales */
+.page-container {
   display: flex;
   justify-content: center;  /* centra horizontalmente */
   width: 100%;
   padding: 40px 20px;
 }
 
-/* Contenido del proyecto */
+
+
+/* Estilo para todas las páginas de proyectos */
 .proyecto-detalle {
-  max-width: 900px;        /* ancho máximo */
-  width: 100%;
-  text-align: center;      /* centra textos */
+  max-width: 900px;       /* ancho máximo del proyecto */
+  width: 100%;            /* ocupa hasta el max-width */
+  margin: 40px auto;      /* centra horizontalmente y agrega espacio superior/inferior */
+  padding: 20px;
+  text-align: center;     /* centra textos e imágenes */
 }
 
-/* Imágenes dentro del proyecto */
 .proyecto-detalle img {
   max-width: 100%;
   height: auto;
   margin: 20px 0;
+  border-radius: 8px;
 }
 
-/* Listas de especificaciones */
 .proyecto-detalle ul {
   list-style: none;
   padding: 0;
+  margin: 20px 0;
 }
 
 .proyecto-detalle li {
   margin: 10px 0;
 }
+
+.proyecto-detalle a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.proyecto-detalle h1 {
+  margin-bottom: 10px;
+}
+
+.proyecto-detalle h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.proyecto-detalle p {
+  margin-bottom: 10px;
+}
+
 
 
 
