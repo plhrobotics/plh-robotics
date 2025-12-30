@@ -221,6 +221,33 @@ body::before {
   cursor: not-allowed;
 }
 
+/* ================= PROYECTOS DESACTIVADOS ================= */
+.proyecto.oculto {
+  display: none;
+}
+
+.ver-mas-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-ver-mas {
+  padding: 12px 28px;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-ver-mas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
 /* ================= SOBRE MI / CONTACTO ================= */
 
 .sobre-mi,
