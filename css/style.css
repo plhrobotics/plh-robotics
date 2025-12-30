@@ -67,11 +67,34 @@ body {
   border-radius: 8px;
 }
 
-/* SOBRE MI */
+/* SOBRE MI y CONTACTO */
 .sobre-mi,
 .contacto {
   padding: 60px 20px;
   text-align: center;
+}
+
+/* PAGINA DE PROYECTO DETALLE */
+.proyecto-detalle {
+  max-width: 900px;       /* ancho máximo */
+  margin: 0 auto;         /* centra horizontalmente */
+  padding: 40px 20px;     /* espacio interno */
+  text-align: center;     /* centra texto e imágenes */
+}
+
+.proyecto-detalle img {
+  max-width: 100%;        /* imagen se ajusta al contenedor */
+  height: auto;
+  margin: 20px 0;
+}
+
+.proyecto-detalle ul {
+  list-style: none;       /* quita viñetas */
+  padding: 0;
+}
+
+.proyecto-detalle li {
+  margin: 10px 0;
 }
 
 /* RESPONSIVE */
