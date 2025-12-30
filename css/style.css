@@ -1,32 +1,79 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* BODY + FONDO DIFUMINADO */
 body {
   font-family: Arial, sans-serif;
-  background-color: #0e163a;
   color: #e5e7eb;
   line-height: 1.6;
+
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    #0e163a 60%,
+    #020617 100%
+  );
+  position: relative;
 }
 
-/* HEADER */
+/* TEXTURA SUTIL (noise) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.015),
+    rgba(255,255,255,0.015) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ================= HEADER ================= */
+
 .header {
-  background-color: #020617;
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #020617,
+    rgba(56, 189, 248, 0.15)
+  );
   padding: 20px 40px;
+  position: relative;
+}
+
+/* GLOW SUAVE */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(56, 189, 248, 0.18),
+    transparent 60%
+  );
+  z-index: 0;
 }
 
 .header-content {
   display: flex;
-  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
-  align-items: center;           /* centra verticalmente */
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .logo-nombre {
   display: flex;
   align-items: center;
-  gap: 15px; /* espacio entre logo y texto */
+  gap: 15px;
 }
 
 .header .logo {
@@ -39,21 +86,20 @@ body {
 .header-text h1 {
   color: #38bdf8;
   font-size: 2rem;
-  margin: 0;
 }
 
 .header-text p {
-  color: #e5e7eb;
   font-size: 1rem;
-  margin: 5px 0 0 0;
+  opacity: 0.9;
 }
+
+/* ================= NAV ================= */
 
 .nav {
   display: flex;
   gap: 20px;
 }
 
-/* NAV */
 .nav a {
   color: #e5e7eb;
   text-decoration: none;
@@ -65,13 +111,24 @@ body {
   color: #38bdf8;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-/* PROYECTOS */
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.85;
+}
+
+/* ================= PROYECTOS ================= */
+
 .proyectos {
   padding: 60px 20px;
 }
@@ -79,116 +136,35 @@ body {
 .grid-proyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
   margin-top: 30px;
 }
 
+/* TARJETAS GLASS */
 .proyecto {
-  background: #020617;
-  border: 1px solid #1e293b;
+  background: rgba(2, 6, 23, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 14px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
 }
 
 .proyecto img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-/* SOBRE MI y CONTACTO */
-.sobre-mi,
-.contacto {
-  padding: 60px 20px;
-  text-align: center;
-}
+/* ================= PROYECTOS DESACTIVADOS ================= */
 
-/* Contenedor de página completa para proyectos individuales */
-.page-container {
-  display: flex;
-  justify-content: center;  /* centra horizontalmente */
-  width: 100%;
-  padding: 40px 20px;
-}
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #020617;
-  color: #e5e7eb;
-  margin-top: 40px;
-}
-.footer a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-.footer a:hover {
-  text-decoration: underline;
-}
-
-
-
-/* Estilo para todas las páginas de proyectos */
-.proyecto-detalle {
-  max-width: 900px;       /* ancho máximo del proyecto */
-  width: 100%;            /* ocupa hasta el max-width */
-  margin: 40px auto;      /* centra horizontalmente y agrega espacio superior/inferior */
-  padding: 20px;
-  text-align: center;     /* centra textos e imágenes */
-}
-
-.proyecto-detalle img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 8px;
-}
-
-.proyecto-detalle ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.proyecto-detalle li {
-  margin: 10px 0;
-}
-
-.proyecto-detalle a {
-  color: #38bdf8;
-  text-decoration: none;
-}
-
-.proyecto-detalle h1 {
-  margin-bottom: 10px;
-}
-
-.proyecto-detalle h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.proyecto-detalle p {
-  margin-bottom: 10px;
-}
-
-
-
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Estilo para proyectos desactivados */
 .proyecto.desactivado {
-  opacity: 0.5;          /* atenuado */
-  pointer-events: none;  /* no clicable */
-}
-
-.proyecto.desactivado a {
-  pointer-events: none;  /* por si queda algún enlace */
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .proximo {
@@ -196,38 +172,87 @@ body {
   padding: 8px 15px;
   background-color: gray;
   color: #fff;
-  border-radius: 5px;
-  cursor: not-allowed;    /* cursor de no disponible */
-  text-decoration: none;
+  border-radius: 6px;
   font-weight: bold;
+  cursor: not-allowed;
 }
 
-/* Actualiza el tamaño del logo en celular */
+/* ================= SOBRE MI / CONTACTO ================= */
+
+.sobre-mi,
+.contacto {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  text-align: center;
+  padding: 25px;
+  background: #020617;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ================= PROYECTOS INDIVIDUALES ================= */
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.proyecto-detalle {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.proyecto-detalle img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.proyecto-detalle ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
 
   .header-content {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .logo-nombre {
     order: 1;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
   .nav {
-    order: 2;                 /* 👈 FUERZA que vaya abajo */
+    order: 2;
     width: 100%;
-    display: flex;
-    justify-content: center;  /* 👈 CENTRA el menú */
-    align-items: center;
+    justify-content: center;
     margin-top: 12px;
+    flex-wrap: wrap;
   }
 
+  .header .logo {
+    max-height: 45px;
+    max-width: 90px;
+  }
 }
-
-
