@@ -74,28 +74,36 @@ body {
   text-align: center;
 }
 
-/* PAGINA DE PROYECTO DETALLE */
 .proyecto-detalle {
   max-width: 900px;       /* ancho máximo */
-  margin: 0 auto;         /* centra horizontalmente */
+  margin: 0 auto;         /* centra horizontalmente todo el contenedor */
   padding: 40px 20px;     /* espacio interno */
-  text-align: center;     /* centra texto e imágenes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* centra todo el contenido dentro */
+  text-align: center;     /* centra textos */
+}
+
+.proyecto-detalle header,
+.proyecto-detalle section {
+  width: 100%;            /* se expande al ancho del contenedor */
 }
 
 .proyecto-detalle img {
-  max-width: 100%;        /* imagen se ajusta al contenedor */
+  max-width: 100%;
   height: auto;
   margin: 20px 0;
 }
 
 .proyecto-detalle ul {
-  list-style: none;       /* quita viñetas */
+  list-style: none;
   padding: 0;
 }
 
 .proyecto-detalle li {
   margin: 10px 0;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
