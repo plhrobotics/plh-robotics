@@ -9,96 +9,116 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1>PLH Robotics</h1>
-    <p>Proyectos de robótica y electrónica</p>
-  </header>
-
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="#proyectos">Proyectos</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <!-- MAIN -->
-  <main>
-
-    <!-- HERO -->
-    <section class="hero">
-      <h2>Diseño y construcción de robots</h2>
-      <p>Robots de pelea, hexápodos y sistemas embebidos con ESP32 y Arduino.</p>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="proyectos">
-      <h2>Proyectos</h2>
-
-      <div class="grid-proyectos">
-
-        <!-- Proyecto 1 -->
-        <article class="proyecto">
-          <img src="assets/img/hexapodo.jpg" alt="Hexápodo">
-          <h3>Hexápodo v2</h3>
-          <p>Robot caminante con cinemática inversa y control Bluetooth.</p>
-          <a href="projects/hexapodo.html">Ver proyecto</a>
-        </article>
-
-        <!-- Proyecto 2 -->
-        <article class="proyecto">
-          <img src="assets/img/robot-pelea.jpg" alt="Robot de pelea">
-          <h3>Robot de pelea 3lb</h3>
-          <p>Diseño compacto con arma giratoria y chasis impreso en 3D.</p>
-          <a href="projects/robot-pelea.html">Ver proyecto</a>
-        </article>
-
-        <!-- Proyecto 3 -->
-        <article class="proyecto">
-          <img src="assets/img/brazo-robotico.jpg" alt="Brazo robótico">
-          <h3>Brazo robótico</h3>
-          <p>Brazo mecánico controlado por ESP32 y servomotores para precisión industrial.</p>
-          <a href="projects/brazo-robotico.html">Ver proyecto</a>
-        </article>
-
-        <!-- Proyecto 4 -->
-        <article class="proyecto">
-          <img src="assets/img/drone.jpg" alt="Drone autónomo">
-          <h3>Drone autónomo</h3>
-          <p>Drone con control por GPS y cámara para navegación automática.</p>
-          <a href="projects/drone.html">Ver proyecto</a>
-        </article>
-
-        <!-- Proyecto 5 -->
-        <article class="proyecto">
-          <img src="assets/img/vehiculo-solar.jpg" alt="Vehículo solar">
-          <h3>Vehículo solar</h3>
-          <p>Vehículo eléctrico impulsado por paneles solares y control Arduino.</p>
-          <a href="projects/vehiculo-solar.html">Ver proyecto</a>
-        </article>
-
+<header id="inicio" class="header">
+  <div class="header-content">
+    <!-- Logo + Nombre a la izquierda -->
+    <div class="logo-nombre">
+      <img src="assets/img/plhroboticslogo.png" alt="PLH Robotics" class="logo">
+      <div class="header-text">
+        <h1>PLH Robotics</h1>
+        <p>Precision, Logic and Horizons for Robotics</p>
       </div>
-    </section>
+    </div>
 
-    <!-- SOBRE MI -->
-    <section id="sobre-mi" class="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Maker enfocado en robótica móvil, control y diseño mecánico.</p>
-    </section>
+    <!-- Menú a la derecha -->
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>  
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <p>Email: contacto@plhrobotics.com</p>
-      <p>
-        <a href="#">GitHub</a> |
-        <a href="#">YouTube</a> |
-        <a href="#">Instagram</a>
-      </p>
-    </section>
+<main>
 
-  </main>
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Desarrollo de soluciones roboticas a medida</h2>
+    <p>Diseñamos y construimos robots funcionales para protipos, educacion y aplicaciones reales</p>
+    <a href="#contacto" class="cta">Solicitar proyecto</a>
+  </section>
 
-  <script src="js/main.js"></script>
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="proyectos">
+    <h2>Proyectos</h2>
+
+    <div class="grid-proyectos">
+
+      <!-- Proyecto 1: Hexápodo desactivado -->
+      <article class="proyecto">
+        <img src="assets/img/hexapodo.jpg" alt="Hexápodo">
+        <h3>Hexápodo v2</h3>
+        <p>Robot caminante con cinemática inversa y control Bluetooth.</p>
+        <a href="projects/hexapodo.html">Ver proyecto</a>
+        <!-- <span clacss="proximo">Ver proyecto</span> -->
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="proyecto">
+        <img src="assets/img/robot-pelea.jpg" alt="Robot de pelea">
+        <h3>Robot de pelea 3lb</h3>
+        <p>Diseño compacto con arma giratoria y chasis impreso en 3D.</p>
+        <a href="projects/robot-pelea.html">Ver proyecto</a>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="proyecto">
+        <img src="assets/img/brazo-robotico.jpg" alt="Brazo robótico">
+        <h3>Brazo robótico</h3>
+        <p>Brazo mecánico controlado por ESP32 y servomotores para precisión industrial.</p>
+        <a href="projects/brazo-robotico.html">Ver proyecto</a>
+      </article>
+
+      <!-- Proyecto 4 -->
+      <article class="proyecto">
+        <img src="assets/img/drone.jpg" alt="Drone autónomo">
+        <h3>Drone autónomo</h3>
+        <p>Drone con control por GPS y cámara para navegación automática.</p>
+        <a href="projects/drone.html">Ver proyecto</a>
+      </article>
+
+      <!-- Proyecto 5 -->
+      <article class="proyecto">
+        <img src="assets/img/vehiculo-solar.jpg" alt="Vehículo solar">
+        <h3>Vehículo solar</h3>
+        <p>Vehículo eléctrico impulsado por paneles solares y control Arduino.</p>
+        <a href="projects/vehiculo-solar.html">Ver proyecto</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Comparto procesos reales y convierto ideas en prototipos funcionales.</p>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>Email: contacto@plhrobotics.com</p>
+    <p>
+      <a href="#">GitHub</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Instagram</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 PLH Robotics. Todos los derechos reservados.</p>
+    <p>
+      <a href="#">GitHub</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+  
+
+</main>
+
+<script src="js/main.js"></script>
 </body>
 </html>
