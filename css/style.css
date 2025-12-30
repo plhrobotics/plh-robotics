@@ -216,11 +216,14 @@ body {
     text-align: center;
   }
 
+  /* ESTA es la clave */
   .nav {
     width: 100%;
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    align-items: center;
+    margin-top: 12px;
   }
 
 }
+
