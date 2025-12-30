@@ -131,17 +131,23 @@ body::before {
 
 .btn-cta {
   display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
-  background: #38bdf8;
-  color: #020617;
-  font-weight: bold;
+  margin-top: 24px;
+  padding: 14px 32px;
   border-radius: 30px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   text-decoration: none;
-  position: relative;
-  z-index: 1;
-
+  border: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+}
+
 
 @keyframes ctaPulse {
   0% {
@@ -299,4 +305,28 @@ body::before {
   100% {
     opacity: 0.15;
   }
+}
+
+.img-proyecto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-proyecto::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: rgba(56, 189, 248, 0.25);
+  filter: blur(40px);
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.img-proyecto img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
 }
