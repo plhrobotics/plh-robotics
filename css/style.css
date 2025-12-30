@@ -261,14 +261,6 @@ body::before {
 }
 
 /* ================= RESPONSIVE ================= */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: #e5e7eb;
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
 
@@ -294,23 +286,6 @@ body::before {
   .header .logo {
     max-height: 45px;
     max-width: 90px;
-  }
-  .menu-toggle {
-    display: block;
-    margin-top: 10px;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    background: rgba(2, 6, 23, 0.95);
-    padding: 15px;
-    border-radius: 12px;
-  }
-
-  .nav.activo {
-    display: flex;
   }
 }
 /* ================= ANIMACIONES ================= */
