@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.container {
+  max-width: 1200px;     /* ancho máximo en desktop */
+  margin: 0 auto;        /* centra horizontalmente */
+  padding: 0 20px;       /* aire en los lados */
+}
+
 /* BODY + FONDO DIFUMINADO */
 body {
   font-family: Arial, sans-serif;
@@ -319,7 +325,7 @@ body::before {
   position: absolute;
   width: 80%;
   height: 80%;
-  background: rgba(56, 189, 248, 0.25);
+  background: rgba(42, 136, 177, 0.25);
   filter: blur(40px);
   z-index: 0;
   border-radius: 50%;
