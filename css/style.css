@@ -191,7 +191,7 @@ body::before {
   border: 1px solid rgba(255,255,255,0.1);
   padding: 20px;
   border-radius: 14px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   
 }
 
@@ -224,7 +224,16 @@ body::before {
 
 /* ================= PROYECTOS OCULTOS ================= */
 .proyecto.oculto {
-  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+/* Cuando se muestran */
+.proyecto.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .ver-mas-container {
@@ -329,11 +338,11 @@ body::before {
   }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .grid-proyectos {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} */
 
 @media (max-width: 600px) {
   .grid-proyectos {
