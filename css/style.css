@@ -135,24 +135,49 @@ body::before {
   opacity: 0.85;
 }
 
+/* CTA - Llamado a la acción */
+.cta {
+  margin: 80px auto;
+  padding: 60px 20px;
+  max-width: 1000px;      /* evita que se vea estirado en pantallas grandes */
+  text-align: center;  
+  border-radius: 16px;
+  /* border: 1px solid #1e293b; */
+}
+
+.cta h2 {
+  font-size: 2rem;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #e5e7eb;
+}
+
 .btn-cta {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 14px 32px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  display: inline-block;   /* importante */
+  padding: 14px 28px;
+  background: #38bdf8;
   color: #020617;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  text-decoration: none;
   border: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .btn-cta:hover {
+  background: #0ea5e9;
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+  transition: all 0.2s ease;
 }
+
+
 
 
 @keyframes ctaPulse {
@@ -397,7 +422,7 @@ body::before {
   max-width: 100%;
 }
 
-/* MODAL */
+/* MODAL - FORMULARIO */
 .modal {
   position: fixed;
   top: 0;
@@ -446,14 +471,32 @@ body::before {
   cursor: pointer;
 }
 
+.mensaje-exito {
+  display: none;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.mensaje-exito h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.mensaje-exito p {
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
 /* BOTÓN */
-.btn-cta {
-  margin-top: 20px;
+/* .btn-cta {
+  display: block;
+  margin-top: 20px auto;
   padding: 12px 20px;
   background: #38bdf8;
   color: #020617;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
-}
+} */
+
