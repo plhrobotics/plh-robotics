@@ -191,7 +191,10 @@ body::before {
   border: 1px solid rgba(255,255,255,0.1);
   padding: 20px;
   border-radius: 14px;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: 
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    max-height 0.4s ease;
   
 }
 
@@ -223,16 +226,23 @@ body::before {
 }
 
 /* ================= PROYECTOS OCULTOS ================= */
+/* Estado oculto */
 .proyecto.oculto {
   opacity: 0;
   transform: translateY(20px);
+  max-height: 0;
+  overflow: hidden;
   pointer-events: none;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-/* Cuando se muestran */
+/* Estado visible */
 .proyecto.visible {
   opacity: 1;
   transform: translateY(0);
+  max-height: 1000px; /* suficiente para el contenido */
   pointer-events: auto;
 }
 
