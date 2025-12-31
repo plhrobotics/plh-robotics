@@ -6,6 +6,25 @@ const proyectosOcultos = document.querySelectorAll(".proyecto.oculto");
 
 let mostrando = false;
 
+const abrirModal = document.getElementById("abrirModal");
+const modal = document.getElementById("modalProyecto");
+const cerrarModal = document.getElementById("cerrarModal");
+
+abrirModal.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+cerrarModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+
 verMasBtn.addEventListener("click", () => {
   mostrando = !mostrando;
 

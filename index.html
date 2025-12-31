@@ -38,9 +38,24 @@
     <h2>Desarrollo de soluciones roboticas a medida</h2>
     <p>Diseñamos y construimos robots funcionales para protipos, educacion y aplicaciones reales</p>
     <!-- <a href="#contacto" class="cta">Solicitar proyecto</a> -->
-    <a href="#contacto" class="btn-cta">Solicitar proyecto</a>
+    <!-- <a href="#contacto" class="btn-cta">Solicitar proyecto</a> -->
   </section>
 
+  <button id="abrirModal" class="btn-cta">
+    Solicitar proyecto
+  </button>
+
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>Email: plhrobotics@gmail.com</p>
+    <p>
+      <a href="#">GitHub</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Instagram</a>
+    </p>
+  </section>
   <!-- PROYECTOS -->
   <section id="proyectos" class="proyectos">
     <div class="container">
@@ -106,17 +121,6 @@
     <p>Comparto procesos reales y convierto ideas en prototipos funcionales.</p>
   </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>Email: plhrobotics@gmail.com</p>
-    <p>
-      <a href="#">GitHub</a> |
-      <a href="#">YouTube</a> |
-      <a href="#">Instagram</a>
-    </p>
-  </section>
-
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2025 PLH Robotics. Todos los derechos reservados.</p>
@@ -129,6 +133,62 @@
   
 
 </main>
+<div id="modalProyecto" class="modal">
+  <div class="modal-contenido">
+
+    <span id="cerrarModal" class="cerrar">&times;</span>
+
+    <h2>Cuéntame tu proyecto</h2>
+    <p>Describe tu idea y me pondré en contacto contigo.</p>
+
+    <!-- FORMULARIO -->
+    <form action="https://formspree.io/f/mdaoqnvk" method="POST">
+
+      <label>
+        Nombre
+        <input type="text" name="nombre" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Tipo de proyecto
+        <select name="tipo_proyecto" required>
+          <option value="">Selecciona uno</option>
+          <option>Robot móvil</option>
+          <option>Robot de pelea</option>
+          <option>Brazo robótico</option>
+          <option>Prototipo electrónico</option>
+          <option>Otro</option>
+        </select>
+      </label>
+
+      <label>
+        Presupuesto estimado
+        <select name="presupuesto">
+          <option>No definido</option>
+          <option>Menos de $5,000 MXN</option>
+          <option>$5,000 – $10,000 MXN</option>
+          <option>$10,000 – $20,000 MXN</option>
+          <option>Más de $20,000 MXN</option>
+        </select>
+      </label>
+
+      <label>
+        Mensaje
+        <textarea name="mensaje" rows="4" required></textarea>
+      </label>
+
+      <button type="submit" class="btn-cta">
+        Enviar solicitud
+      </button>
+
+    </form>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>
